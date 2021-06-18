@@ -1,0 +1,5 @@
+{
+    "prettier.printWidth": 70,
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.compatibleVendorPrefixes": "warning"
+}

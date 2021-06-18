@@ -1,0 +1,65 @@
+<div class="container mt-5">
+    <h1>City form</h1>
+    <div [hidden]="submitted">
+        <form class="m-3" #cityForm="ngForm" (ngSubmit)="onSubmit()">
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="model.name" required name="name"
+                    #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    Name is required
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="manager" class="form-label">Manager</label>
+                <input type="text" class="form-control" id="manager" name="manager" required
+                    [(ngModel)]="model.manager">
+            </div>
+
+            <div class="mb-3">
+                <label for="population" class="form-label">Population</label>
+                <select class="form-select" 
+                required 
+                id="population" 
+                [(ngModel)]="model.population" 
+                name="population">
+                    <option *ngFor="let num of population" 
+                    [value]="num">{{num}}</option>
+                </select>
+            </div>
+
+
+            <button type="submit" 
+            class="btn btn-danger mt-3 mr-5" 
+            [disabled]="!cityForm.form.valid"
+             >Submit</button>
+
+            <button type="button" 
+            class="btn btn-light mt-3" 
+            (click)="newTown(); cityForm.reset()"
+            >New Hero</button>
+
+        </form>
+    </div>
+
+    <div [hidden]="!submitted">
+        <h2>You submitted the following:</h2>
+        <div class="row">
+            <div class="col-3">Name</div>
+            <div class="col-9">{{ model.name }}</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Manager</div>
+            <div class="col-9">{{ model.manager }}</div>
+        </div>
+        <div class="row">
+            <div class="col-3">Population</div>
+            <div class="col-9">{{ model.population }}</div>
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+    </div>
+
+</div>

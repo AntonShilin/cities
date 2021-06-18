@@ -11,6 +11,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CityFormComponent } from './city-form/city-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CityDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    CityFormComponent,
   ],
   imports: [
     BrowserModule,
