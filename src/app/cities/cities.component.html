@@ -1,0 +1,7 @@
+<ul class="cities">
+    <li *ngFor="let city of cities">
+        <a routerLink="/detail/{{city.id}}">
+            <span class="badge">{{city.id}}</span> {{city.name}}
+        </a>
+    </li>
+</ul>

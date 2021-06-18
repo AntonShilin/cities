@@ -1,20 +1,20 @@
+import { ICity } from './../interfases/city';
 import { MessageService } from './message.service';
-import { IHero } from './../interfases/hero';
 
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class HeroService {
-  private collection?: AngularFirestoreCollection<IHero>;
-  items?: Observable<IHero[]>;
+export class CityService {
+  private collection?: AngularFirestoreCollection<ICity>;
+  items?: Observable<ICity[]>;
 
   constructor(private db: AngularFirestore, private messageService: MessageService) {
-    this.collection = db.collection<IHero>('heroes');
+    this.collection = db.collection<ICity>('cities');
     this.items = this.collection.valueChanges();
   }
 
@@ -23,9 +23,9 @@ export class HeroService {
     return this.items;
   }
 
-  getElemById(id: number): Observable<IHero | undefined> {
-    this.messageService.add(`Get hero number ${id} from Firestore`);
-    return this.db.collection<IHero>("heroes").doc(id.toString()).valueChanges();
+  getElemById(id: number): Observable<ICity | undefined> {
+    this.messageService.add(`Get city number ${id} from Firestore`);
+    return this.db.collection<ICity>("cities").doc(id.toString()).valueChanges();
   }
 
 }

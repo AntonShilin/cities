@@ -1,4 +1,4 @@
-export interface IHero {
+export interface ICity {
     id: number | string;
     name: string;
 }

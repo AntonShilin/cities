@@ -1,10 +1,10 @@
+import { CityDetailComponent } from './city-detail/city-detail.component';
+import { CitiesComponent } from './cities/cities.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from "@angular/fire/firestore";
@@ -15,8 +15,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
+    CitiesComponent,
+    CityDetailComponent,
     MessagesComponent,
     DashboardComponent,
   ],
