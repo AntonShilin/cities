@@ -9,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   cities: ICity[] = [];
-  
+
   constructor(private cityService: CityService) { }
 
   ngOnInit(): void {
     this.getData();
+
   }
 
   getData(): void {
     this.cityService.getDataFromFirestore()!.subscribe(arr => {
       this.cities = arr;
-      console.log(arr)
     })
   }
 

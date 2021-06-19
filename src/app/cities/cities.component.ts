@@ -1,5 +1,5 @@
-import { CityService } from './../services/city.service';
-import { ICity } from './../interfases/city';
+import { CityService } from '../services/city.service';
+import { ICity } from '../interfases/city';
 
 import { Component, OnInit } from '@angular/core';
 

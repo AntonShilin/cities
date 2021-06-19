@@ -1,8 +1,16 @@
-<h1>{{title}}</h1>
-<nav>
-    <a routerLink="/cities">Cities</a>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/contact">Contact</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<div class="container-xl">
+    <nav class="nav mb-5">
+        <a class="nav-link" routerLink="/cities">Cities</a>
+        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+        <a class="nav-link" routerLink="/contact">Contact</a>
+    </nav>
+
+    <h1>{{title}}</h1>
+
+
+    <router-outlet></router-outlet>
+
+
+    <app-messages></app-messages>
+
+</div>

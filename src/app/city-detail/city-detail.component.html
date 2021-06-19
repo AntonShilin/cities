@@ -1,9 +1,11 @@
-<div *ngIf="city">
+<div *ngIf="city" class="detail-item">
     <h2>{{city.name|uppercase}}</h2>
-    <div><span>id: </span>{{city.id}}</div>
+    <div class="badge bg-primary"><span>id: </span>{{city.id}}</div>
     <div>
-        <label for="name">City name: </label>
-        <input [value]="city.name" id="name" [(ngModel)]="city.name">
+        <label for="name" class="form-label">City name: </label>
+        <input class="form-control w-50" [value]="city.name" id="name" [(ngModel)]="city.name">
     </div>
 </div>
-<button (click)="goBack()">Go Back</button>
+
+
+<button (click)="goBack()" class="btn btn-primary">Go Back</button>

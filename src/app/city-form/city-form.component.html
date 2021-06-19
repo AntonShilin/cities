@@ -1,5 +1,5 @@
-<div class="container mt-5">
-    <h1>City form</h1>
+<div class="container-xl mt-5">
+    <h3 class="text-center">City form</h3>
     <div [hidden]="submitted">
         <form class="m-3" #cityForm="ngForm" (ngSubmit)="onSubmit()">
 
@@ -32,12 +32,12 @@
 
 
             <button type="submit" 
-            class="btn btn-danger mt-3 mr-5" 
+            class="btn btn-danger m-3" 
             [disabled]="!cityForm.form.valid"
              >Submit</button>
 
             <button type="button" 
-            class="btn btn-light mt-3" 
+            class="btn btn-light m-3" 
             (click)="newTown(); cityForm.reset()"
             >New Hero</button>
 

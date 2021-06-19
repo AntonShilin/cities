@@ -1,7 +1,10 @@
 /* HeroDetailComponent's private CSS styles */
+.detail-item{
+  padding: 0.5rem;
+  border: 1px solid lightgrey;
+}
 label {
     color: #435960;
-    font-weight: bold;
   }
   input {
     font-size: 1em;
@@ -10,12 +13,13 @@ label {
   button {
     margin-top: 20px;
     background-color: #eee;
-    padding: 1rem;
     border-radius: 4px;
     font-size: 1rem;
+    color: lightslategray;
   }
   button:hover {
     background-color: #cfd8dc;
+    color: rgb(201, 81, 81);
   }
   button:disabled {
     background-color: #eee;

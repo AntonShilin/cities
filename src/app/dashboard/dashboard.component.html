@@ -1,8 +1,6 @@
 <h2>Top Cities</h2>
 <div class="cities-menu">
-    <a 
-    *ngFor="let city of cities" 
-    routerLink="/detail/{{city.id}}">
-    {{city.name}}
+    <a *ngFor="let city of cities" routerLink="/detail/{{city.id}}">
+        {{city.name}}
     </a>
 </div>
